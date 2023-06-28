@@ -1,76 +1,136 @@
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [IconButton].
+/// Flutter code sample for [IconButton] with toggle feature.
 
 void main() {
-  runApp(const IconButtonApp());
+  runApp(const IconButtonToggleApp());
 }
 
-class IconButtonApp extends StatelessWidget {
-  const IconButtonApp({super.key});
+class IconButtonToggleApp extends StatelessWidget {
+  const IconButtonToggleApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          colorSchemeSeed: const Color(0xff6750a4), useMaterial3: true),
+        colorSchemeSeed: const Color(0xff6750a4),
+        useMaterial3: true,
+      ),
       title: 'Icon Button Types',
       home: const Scaffold(
-        body: ButtonTypesExample(),
+        body: DemoIconToggleButtons(),
       ),
     );
   }
 }
 
-class ButtonTypesExample extends StatelessWidget {
-  const ButtonTypesExample({super.key});
+class DemoIconToggleButtons extends StatefulWidget {
+  const DemoIconToggleButtons({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(4.0),
-      child: Row(
-        children: <Widget>[
-          Spacer(),
-          ButtonTypesGroup(enabled: true),
-          ButtonTypesGroup(enabled: false),
-          Spacer(),
-        ],
-      ),
-    );
-  }
+  State<DemoIconToggleButtons> createState() => _DemoIconToggleButtonsState();
 }
 
-class ButtonTypesGroup extends StatelessWidget {
-  const ButtonTypesGroup({super.key, required this.enabled});
-
-  final bool enabled;
+class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
+  bool standardSelected = false;
+  bool filledSelected = false;
+  bool tonalSelected = false;
+  bool outlinedSelected = false;
 
   @override
   Widget build(BuildContext context) {
-    final VoidCallback? onPressed = enabled ? () {} : null;
-
-    return Padding(
-      padding: const EdgeInsets.all(4.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          IconButton(
-              icon: const Icon(Icons.filter_drama), onPressed: onPressed),
-
-          // Filled icon button
-          IconButton.filled(
-              onPressed: onPressed, icon: const Icon(Icons.filter_drama)),
-
-          // Filled tonal icon button
-          IconButton.filledTonal(
-              onPressed: onPressed, icon: const Icon(Icons.filter_drama)),
-
-          // Outlined icon button
-          IconButton.outlined(
-              onPressed: onPressed, icon: const Icon(Icons.filter_drama)),
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            IconButton(
+              isSelected: standardSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: () {
+                setState(() {
+                  standardSelected = !standardSelected;
+                });
+              },
+            ),
+            const SizedBox(width: 10),
+            IconButton(
+              isSelected: standardSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: null,
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            IconButton.filled(
+              isSelected: filledSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: () {
+                setState(() {
+                  filledSelected = !filledSelected;
+                });
+              },
+            ),
+            const SizedBox(width: 10),
+            IconButton.filled(
+              isSelected: filledSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: null,
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            IconButton.filledTonal(
+              isSelected: tonalSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: () {
+                setState(() {
+                  tonalSelected = !tonalSelected;
+                });
+              },
+            ),
+            const SizedBox(width: 10),
+            IconButton.filledTonal(
+              isSelected: tonalSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: null,
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            IconButton.outlined(
+              isSelected: outlinedSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: () {
+                setState(() {
+                  outlinedSelected = !outlinedSelected;
+                });
+              },
+            ),
+            const SizedBox(width: 10),
+            IconButton.outlined(
+              isSelected: outlinedSelected,
+              icon: const Icon(Icons.settings_outlined),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: null,
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
