@@ -1,28 +1,13 @@
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [Scaffold].
-
-void main() => runApp(const ScaffoldExampleApp());
-
-class ScaffoldExampleApp extends StatelessWidget {
-  const ScaffoldExampleApp({super.key});
+class AppMainPage extends StatefulWidget {
+  const AppMainPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ScaffoldExample(),
-    );
-  }
+  State<AppMainPage> createState() => _MainPage();
 }
 
-class ScaffoldExample extends StatefulWidget {
-  const ScaffoldExample({super.key});
-
-  @override
-  State<ScaffoldExample> createState() => _ScaffoldExampleState();
-}
-
-class _ScaffoldExampleState extends State<ScaffoldExample> {
+class _MainPage extends State<AppMainPage> {
   int _count = 0;
 
   @override
