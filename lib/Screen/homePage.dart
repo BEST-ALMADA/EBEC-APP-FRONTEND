@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../calendar_timeline.dart';
+import '../Widgets/Schedule/calendar_timeline.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);

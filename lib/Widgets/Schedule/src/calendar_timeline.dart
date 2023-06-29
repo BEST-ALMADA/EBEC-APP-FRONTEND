@@ -1,7 +1,7 @@
-import 'package:calendar_timeline/src/day_item.dart';
-import 'package:calendar_timeline/src/month_item.dart';
-import 'package:calendar_timeline/src/util/utils.dart';
-import 'package:calendar_timeline/src/year_item.dart';
+import 'package:calendar_timeline/Widgets/Schedule/src/day_item.dart';
+import 'package:calendar_timeline/Widgets/Schedule/src/month_item.dart';
+import 'package:calendar_timeline/Widgets/Schedule/src/util/utils.dart';
+import 'package:calendar_timeline/Widgets/Schedule/src/year_item.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
