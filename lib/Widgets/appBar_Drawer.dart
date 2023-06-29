@@ -8,6 +8,7 @@ class DrawerExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: DrawerExample(),
     );
   }
@@ -44,15 +45,27 @@ class _DrawerExampleState extends State<DrawerExample> {
               ),
               child: Text('Drawer Header'),
             ),
+            Material(
+                color: Colors.yellow,
+                child: ListTile(
+                  title: const Text(
+                    'BEST COURSE',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  onTap: () {
+                    // Update the state of the app.
+                    // ...
+                  },
+                  leading: IgnorePointer(
+                    ignoring: true,
+                    child: Opacity(
+                      opacity: 0.5, // Adjust the opacity as needed
+                      child: Icon(Icons.lock),
+                    ),
+                  ),
+                )),
             ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                // Update the state of the app.
-                // ...
-              },
-            ),
-            ListTile(
-              title: const Text('Item 2'),
+              title: const Text('TRAP'),
               onTap: () {
                 // Update the state of the app.
                 // ...

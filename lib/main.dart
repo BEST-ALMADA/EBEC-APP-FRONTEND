@@ -1,14 +1,42 @@
+import 'package:calendar_timeline/Screen/signinPage.dart';
 import 'package:flutter/material.dart';
+import 'Screen/loadingPage.dart';
 import 'Screen/mainPage.dart';
 import 'Screen/homePage.dart';
 import 'Widgets/appBar_Drawer.dart';
+import 'Widgets/navBar.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool _isLoading = true;
+  bool _notLoggedIn = true;
+
+  void _login() {
+    setState(() {
+      _notLoggedIn = false;
+    });
+  }
+
+  @override
+  void initState() {
+    // Simulate some delay for initialization or data loading
+    Future.delayed(Duration(seconds: 2), () {
+      setState(() {
+        _isLoading = false;
+      });
+    });
+    super.initState();
+  }
 
   // This widget is the root of your application.
   @override
@@ -18,7 +46,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      home: DrawerExampleApp(),
+      home: _isLoading
+          ? const LoadingPage()
+          : _notLoggedIn
+              ? SignInPage(loginCallback: _login)
+              : AppMainPage(),
       //home: const MyHomePage(title: 'BEST Almada'),
     );
   }
