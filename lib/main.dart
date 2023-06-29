@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'Screen/mainPage.dart';
 import 'Screen/homePage.dart';
+import 'Widgets/appBar_Drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(title: 'BEST Almada'),
+      home: DrawerExampleApp(),
+      //home: const MyHomePage(title: 'BEST Almada'),
     );
   }
 }
