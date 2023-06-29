@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 
 /// Flutter code sample for [IconButton] with toggle feature.
 
-void main() {
-  runApp(const IconButtonToggleApp());
-}
-
 class IconButtonToggleApp extends StatelessWidget {
   const IconButtonToggleApp({super.key});
 
