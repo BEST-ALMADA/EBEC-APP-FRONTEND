@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../Widgets/appBar.dart';
 import '../Widgets/drawerBar.dart';
+import '../Widgets/likeButton.dart';
 import '../Widgets/navigationBar.dart';
 
 class AppMainPage extends StatefulWidget {
@@ -20,7 +21,8 @@ class _MainPage extends State<AppMainPage> {
       drawer: DrawerExample(),
       drawerEnableOpenDragGesture: true,
       body: Center(
-        child: Text('Hello, World!'),
+        //child: Text('Hello, World!'),
+        child: IconButtonToggleApp(),
       ),
       bottomNavigationBar: NavigationBarMain(),
       floatingActionButton: FloatingActionButton(
