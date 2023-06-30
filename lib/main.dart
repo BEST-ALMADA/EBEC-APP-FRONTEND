@@ -1,6 +1,7 @@
 import 'package:calendar_timeline/Screen/signinPage.dart';
 import 'package:flutter/material.dart';
 import 'Screen/loadingPage.dart';
+import 'Screen/logIn.dart';
 import 'Screen/mainPage.dart';
 import 'Screen/homePage.dart';
 import 'Widgets/appBar_Drawer.dart';
@@ -21,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   bool _isLoading = true;
   bool _notLoggedIn = true;
 
-  void _login() {
+  void _login(String? email, String? password) async {
     setState(() {
       _notLoggedIn = false;
     });
@@ -49,7 +50,7 @@ class _MyAppState extends State<MyApp> {
       home: _isLoading
           ? const LoadingPage()
           : _notLoggedIn
-              ? SignInPage(loginCallback: _login)
+              ? SimpleLoginScreen(onSubmitted: _login)
               : AppMainPage(),
       //home: const MyHomePage(title: 'BEST Almada'),
     );

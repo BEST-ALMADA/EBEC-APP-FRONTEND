@@ -41,7 +41,7 @@ class _SimpleLoginScreenState extends State<SimpleLoginScreen> {
     bool isValid = true;
     if (email.isEmpty || !emailExp.hasMatch(email)) {
       setState(() {
-        emailError = 'Email is invalid';
+        emailError = 'Email inválido';
       });
       isValid = false;
     }
