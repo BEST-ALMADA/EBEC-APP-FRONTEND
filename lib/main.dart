@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Screen/schedulePage.dart';
+//import 'Screen/schedulePage.dart';
 import 'Screen/loadingPage.dart';
 import 'Screen/LogIn/singInPage.dart';
 import 'Screen/mainPage.dart';
