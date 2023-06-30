@@ -1,8 +1,9 @@
+import 'package:calendar_timeline/Screen/qrcode.dart';
 import 'package:flutter/material.dart';
 
-import '../Widgets/appBar_Drawer.dart';
-import '../Widgets/navBar.dart';
-import '../Widgets/navBarMain.dart';
+import '../Widgets/appBar.dart';
+import '../Widgets/drawerBar.dart';
+import '../Widgets/navigationBar.dart';
 
 class AppMainPage extends StatefulWidget {
   const AppMainPage({super.key});
@@ -23,7 +24,12 @@ class _MainPage extends State<AppMainPage> {
       ),
       bottomNavigationBar: NavigationBarMain(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => setState(() {}),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => QRViewExample()),
+          );
+        },
         tooltip: 'Increment Counter',
         child: const Icon(Icons.add),
       ),
