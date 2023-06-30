@@ -1,11 +1,10 @@
-import 'package:calendar_timeline/Screen/signinPage.dart';
 import 'package:flutter/material.dart';
 import 'Screen/loadingPage.dart';
-import 'Screen/logIn.dart';
+import 'Screen/LogIn/singInPage.dart';
 import 'Screen/mainPage.dart';
-import 'Screen/homePage.dart';
-import 'Widgets/appBar_Drawer.dart';
-import 'Widgets/navBar.dart';
+//import 'Screen/homePage.dart';
+//import 'Widgets/appBar_Drawer.dart';
+//import 'Widgets/navBar.dart';
 
 void main() {
   runApp(const MyApp());
