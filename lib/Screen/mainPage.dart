@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../Widgets/appBar_Drawer.dart';
+import '../Widgets/navBar.dart';
+import '../Widgets/navBarMain.dart';
+
 class AppMainPage extends StatefulWidget {
   const AppMainPage({super.key});
 
@@ -8,25 +12,18 @@ class AppMainPage extends StatefulWidget {
 }
 
 class _MainPage extends State<AppMainPage> {
-  int _count = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Sample Code'),
-      ),
+      appBar: DrawerExampleApp(),
+      drawer: DrawerExample(),
+      drawerEnableOpenDragGesture: true,
       body: Center(
-        child: Text('You have pressed the button $_count times.'),
+        child: Text('Hello, World!'),
       ),
-      bottomNavigationBar: BottomAppBar(
-        shape: const CircularNotchedRectangle(),
-        child: Container(height: 50.0),
-      ),
+      bottomNavigationBar: NavigationBarMain(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => setState(() {
-          _count++;
-        }),
+        onPressed: () => setState(() {}),
         tooltip: 'Increment Counter',
         child: const Icon(Icons.add),
       ),

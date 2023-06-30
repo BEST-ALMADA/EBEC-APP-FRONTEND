@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Screen/schedulePage.dart';
 import 'Screen/loadingPage.dart';
 import 'Screen/LogIn/singInPage.dart';
 import 'Screen/mainPage.dart';
@@ -46,12 +47,12 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      home: _isLoading
+      /* home: _isLoading
           ? const LoadingPage()
           : _notLoggedIn
               ? SimpleLoginScreen(onSubmitted: _login)
-              : AppMainPage(),
-      //home: const MyHomePage(title: 'BEST Almada'),
+              : AppMainPage(),*/
+      home: const AppMainPage(),
     );
   }
 }
