@@ -87,7 +87,7 @@ class NavigationBarMain extends StatelessWidget {
   }
 }*/
 
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
+/*import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../Screen/homePage.dart';
@@ -161,3 +161,5 @@ class _NavigationBarMainState extends State<NavigationBarMain> {
     }
   }
 }
+*/
+

@@ -18,13 +18,11 @@ class _SearchPage extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: DrawerExampleApp(),
-      drawer: DrawerExample(),
-      drawerEnableOpenDragGesture: true,
       body: Center(
         //child: Text('Hello, World!'),
         child: Text('yolo'),
       ),
-      bottomNavigationBar: NavigationBarMain(initialIndex: 1),
+      //bottomNavigationBar: NavigationBarMain(initialIndex: 1),
     );
   }
 }

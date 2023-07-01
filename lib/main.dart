@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
           : _notLoggedIn
               ? SimpleLoginScreen(onSubmitted: _login)
               : AppMainPage(),*/
-      home: const AppMainPage(),
+      home: MainScreen(index: 0),
     );
   }
 }
