@@ -24,18 +24,11 @@ class _MainPage extends State<AppMainPage> {
         //child: Text('Hello, World!'),
         child: IconButtonToggleApp(),
       ),
-      bottomNavigationBar: NavigationBarMain(),
+      bottomNavigationBar: NavigationBarMain(initialIndex: 2),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => QRViewExample()),
-          );
-        },
-        tooltip: 'Increment Counter',
-        child: const Icon(Icons.add),
+        onPressed: () {},
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
