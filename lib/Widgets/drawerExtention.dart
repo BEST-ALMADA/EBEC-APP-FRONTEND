@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DrawerExample extends StatefulWidget {
-  const DrawerExample({super.key});
+class DrawerExtension extends StatefulWidget {
+  const DrawerExtension({super.key});
 
   @override
-  State<DrawerExample> createState() => _DrawerExampleState();
+  State<DrawerExtension> createState() => _DrawerExtensionState();
 }
 
-class _DrawerExampleState extends State<DrawerExample> {
+class _DrawerExtensionState extends State<DrawerExtension> {
   void _closeDrawer() {
     Navigator.of(context).pop();
   }
