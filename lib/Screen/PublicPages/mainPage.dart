@@ -1,9 +1,11 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:calendar_timeline/Screen/UsersPages/searchPage.dart';
+import 'package:calendar_timeline/Screen/PublicPages/profilePage.dart';
+import 'package:calendar_timeline/Screen/PublicPages/searchPage.dart';
 
 import 'package:flutter/material.dart';
 
 import '../../Widgets/drawerExtention.dart';
+import '../PrivatePages/schedulePage.dart';
 import 'homePage.dart';
 
 class MainScreen extends StatefulWidget {
@@ -93,6 +95,7 @@ List<Widget> _widgetOptions() => [
       //SettingsPage(),
       //SchedulePage(), //estudante
       //MapPage(username: _currentUser.username),
-      Placeholder(), //professor
-      Placeholder(), //diretor
+      TableEventsExample(), //professor
+      //SchedulePage(), //diretor
+      ProfilePage(),
     ];
