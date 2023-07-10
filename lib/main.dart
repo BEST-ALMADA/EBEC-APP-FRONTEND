@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 //import 'Screen/schedulePage.dart';
 import 'Screen/loadingPage.dart';
 import 'Screen/LogIn/singInPage.dart';
-import 'Screen/mainPage.dart';
+import 'Screen/UsersPages/mainPage.dart';
 //import 'Screen/homePage.dart';
 //import 'Widgets/appBar_Drawer.dart';
 //import 'Widgets/navBar.dart';
@@ -47,11 +47,11 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      /* home: _isLoading
+      /*home: _isLoading
           ? const LoadingPage()
           : _notLoggedIn
               ? SimpleLoginScreen(onSubmitted: _login)
-              : AppMainPage(),*/
+              : MainScreen(index: 0),*/
       home: MainScreen(index: 0),
     );
   }

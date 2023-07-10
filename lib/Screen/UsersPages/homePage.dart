@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Widgets/likeButton.dart';
+import '../../Widgets/likeButton.dart';
 
 class HomePage extends StatelessWidget {
   @override

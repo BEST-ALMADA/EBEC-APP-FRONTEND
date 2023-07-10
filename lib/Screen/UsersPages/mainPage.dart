@@ -1,11 +1,9 @@
-import 'package:calendar_timeline/Screen/qrcode.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
-import 'package:calendar_timeline/Screen/searchPage.dart';
+import 'package:calendar_timeline/Screen/UsersPages/searchPage.dart';
 
 import 'package:flutter/material.dart';
 
-import '../Widgets/drawerExtention.dart';
-import '../Widgets/likeButton.dart';
+import '../../Widgets/drawerExtention.dart';
 import 'homePage.dart';
 
 class MainScreen extends StatefulWidget {

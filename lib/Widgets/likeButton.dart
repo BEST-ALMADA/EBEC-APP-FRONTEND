@@ -35,15 +35,40 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      isSelected: standardSelected,
-      icon: const Icon(Icons.favorite_border_outlined),
-      selectedIcon: const Icon(Icons.favorite),
-      onPressed: () {
-        setState(() {
-          standardSelected = !standardSelected;
-        });
-      },
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            IconButton(
+              isSelected: standardSelected,
+              icon: const Icon(Icons.favorite_border_outlined),
+              selectedIcon: const Icon(Icons.favorite),
+              onPressed: () {
+                setState(() {
+                  standardSelected = !standardSelected;
+                });
+              },
+            ),
+          ],
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            IconButton.outlined(
+              isSelected: outlinedSelected,
+              icon: const Icon(Icons.upload_file),
+              selectedIcon: const Icon(Icons.settings),
+              onPressed: () {
+                setState(() {
+                  outlinedSelected = !outlinedSelected;
+                });
+              },
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
