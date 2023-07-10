@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 //import 'Screen/schedulePage.dart';
 import 'Screen/loadingPage.dart';
 import 'Screen/LogIn/singInPage.dart';
-import 'Screen/homePage.dart';
+import 'Screen/mainPage.dart';
 //import 'Screen/homePage.dart';
 //import 'Widgets/appBar_Drawer.dart';
 //import 'Widgets/navBar.dart';

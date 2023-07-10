@@ -9,7 +9,7 @@ class IconButtonToggleApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorSchemeSeed: const Color(0xff6750a4),
+        colorSchemeSeed: Color.fromARGB(255, 252, 53, 53),
         useMaterial3: true,
       ),
       title: 'Icon Button Types',
@@ -35,98 +35,15 @@ class _DemoIconToggleButtonsState extends State<DemoIconToggleButtons> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            IconButton(
-              isSelected: standardSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: () {
-                setState(() {
-                  standardSelected = !standardSelected;
-                });
-              },
-            ),
-            const SizedBox(width: 10),
-            IconButton(
-              isSelected: standardSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: null,
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            IconButton.filled(
-              isSelected: filledSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: () {
-                setState(() {
-                  filledSelected = !filledSelected;
-                });
-              },
-            ),
-            const SizedBox(width: 10),
-            IconButton.filled(
-              isSelected: filledSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: null,
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            IconButton.filledTonal(
-              isSelected: tonalSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: () {
-                setState(() {
-                  tonalSelected = !tonalSelected;
-                });
-              },
-            ),
-            const SizedBox(width: 10),
-            IconButton.filledTonal(
-              isSelected: tonalSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: null,
-            ),
-          ],
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            IconButton.outlined(
-              isSelected: outlinedSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: () {
-                setState(() {
-                  outlinedSelected = !outlinedSelected;
-                });
-              },
-            ),
-            const SizedBox(width: 10),
-            IconButton.outlined(
-              isSelected: outlinedSelected,
-              icon: const Icon(Icons.settings_outlined),
-              selectedIcon: const Icon(Icons.settings),
-              onPressed: null,
-            ),
-          ],
-        ),
-      ],
+    return IconButton(
+      isSelected: standardSelected,
+      icon: const Icon(Icons.favorite_border_outlined),
+      selectedIcon: const Icon(Icons.favorite),
+      onPressed: () {
+        setState(() {
+          standardSelected = !standardSelected;
+        });
+      },
     );
   }
 }
