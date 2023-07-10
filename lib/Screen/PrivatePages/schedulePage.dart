@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 import '../utils.dart';
 
@@ -21,6 +22,7 @@ class _TableEventsExampleState extends State<TableEventsExample> {
   @override
   void initState() {
     super.initState();
+    initializeDateFormatting('pt_PT');
 
     _selectedDay = _focusedDay;
     _selectedEvents = ValueNotifier(_getEventsForDay(_selectedDay!));
@@ -82,12 +84,10 @@ class _TableEventsExampleState extends State<TableEventsExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('TableCalendar - Events'),
-      ),
       body: Column(
         children: [
           TableCalendar<Event>(
+            locale: 'pt_PT',
             firstDay: kFirstDay,
             lastDay: kLastDay,
             focusedDay: _focusedDay,
